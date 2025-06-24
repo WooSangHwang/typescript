@@ -7,7 +7,11 @@
     "outDir": "dist", /*컴파일 결과 위치 => dist 파일 안에 컴파일된 js 파일들이 생성됨*/
     "strict": true, /*ts 코드 엄격한 검사 true 엄격함/false 유연하게 검사*/
     "moduleDetection": "force", /*같은 디렉토리 안에 같은 이름의 변수는 하나의 스코프로 여기는 ts을 끔*/
-     /*moduleDetection을의 force를 사용하고나, export{} 문법을 사용하면 됨 git 730f185cf8e435 내용 확인 */
+     /*moduleDetection을의 force를 사용하고나, export{} 문법을 사용하면 됨 git 730f185cf8e435 내용 확인
+     ts는 기본적으로 글로벌 모듈로 처리되어 다른 파일의 동일한 변수 이름을 허용하지 않음.
+     force로 할경우 Js 빌드 시 자동으로 export{} 를 추가함으로 써 개별 모듈로 취급하게 된다.
+     force를 추가하던지 각각의 파일의 export{}를 추가할건지.. 설정해야함.
+     */
 
   },
   /*컴파일 범위 설정  terminam에서 tsc 호출 시 하위 ts파일 js로 빌드됨 */
