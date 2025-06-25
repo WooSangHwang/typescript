@@ -14,3 +14,9 @@ let doubleArr = [
 let tup1 = [1, 2];
 let tup2 = [1, "2", true];
 export {};
+//ex 인텍스의 위치가 중요할경우
+// const user: [string, number][] = [
+//   ["이정환", 1],
+//   ["황우상", 2],
+//   [3, "최아무개"],
+// ];
