@@ -8,4 +8,13 @@ let user2 = {
     name: "2정환",
     nickname: "2hee",
 };
+let contryCodes = {
+    Korea: "ko",
+    UnitedState: "us",
+    UnitedKindom: "uk",
+};
+let countryNumberCodes = {
+    Korea: 410,
+    UnitedState: 840,
+};
 export {};
