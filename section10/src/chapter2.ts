@@ -51,3 +51,23 @@ type Omit2<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 // Pick<Post, Exclude<keyof Post, 'title'>>
 // Pick<Post, Exclude<'title' | 'content' | 'tags' | 'thumbnailURL', 'title'>>
 // Pick<Post, 'content' | 'tags' | 'thumbnail' >
+
+/**
+ * Recode<K, V>
+ */
+
+type ThumbnailLegacy = {
+  large: { url: string };
+  medium: { url: string };
+  small: { url: string };
+};
+
+type Thumbnail = Record<
+  "large" | "medium" | "small" | "watch",
+  { url: string; size: number }
+>;
+
+//직접만들기 any의 키 값이야..
+type Record2<K extends keyof any, V> = {
+  [key in K]: V;
+};
