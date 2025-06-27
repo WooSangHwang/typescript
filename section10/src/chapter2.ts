@@ -46,7 +46,7 @@ const noTitlePost2: Omit<Post, "title"> = {
 };
 
 //직접 구현하기
-type Omit2<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>;
+type Omit2<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 // T = Post, K = 'title'
 // Pick<Post, Exclude<keyof Post, 'title'>>
 // Pick<Post, Exclude<'title' | 'content' | 'tags' | 'thumbnailURL', 'title'>>
